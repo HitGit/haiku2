@@ -1,0 +1,13 @@
+development:
+  adapter: postgresql
+  database: haiku2_development
+  user: postgres
+  password: postgres
+  host: localhost
+
+test:
+  adapter:  postgresql
+  database:  haiku2_test
+  user: postgres
+  password: postgres
+  host: localhost

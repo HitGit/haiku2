@@ -1,0 +1,18 @@
+<h2>New Haiku</h2>
+
+<%= form_for :poem, url: poems_path do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :body %><br>
+    <%= f.text_field :body %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>
