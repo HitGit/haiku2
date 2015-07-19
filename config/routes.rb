@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
-  resources :poems
+
+  resources :poems do
+    resources :comments
+  end
+
   root "poems#index"
+
 end
