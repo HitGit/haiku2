@@ -13,4 +13,14 @@
     <p class="body">
       <%= @poem.body %>
     </p>
+
+  <div id="comments">
+    <h2><%= @poem.comments.count %> Comments</h2>
+    <%= render @poem.comments %>
+
+    <h3>Add a comment:</h3>
+    <%= render "comments/form" %>
+  </div>
+
+
 </div>
