@@ -1,32 +1,5 @@
 <div id="page_wrapper">
     <h2>New Haiku</h2>
 
-    <%= form_for :poem, url: poems_path do |f| %>
-      <% if @poem.errors.any? %>
-          <div id="errors">
-            <h2><%= pluralize(@poem.errors.count, "error") %> prevented this post from saving:</h2>
-            <ul>
-              <% @poem.errors.full_messages.each do |msg| %>
-                  <li><%= msg %></li>
-              <% end %>
-            </ul>
-          </div>
-      <% end %>
-
-
-      <p>
-        <%= f.label :title %><br>
-        <%= f.text_field :title %>
-      </p>
-
-      <p>
-        <%= f.label :body %><br>
-        <%= f.text_field :body %>
-      </p>
-
-      <p>
-        <%= f.submit %>
-      </p>
-
-    <% end %>
+   <%= render 'form' %>
 </div>

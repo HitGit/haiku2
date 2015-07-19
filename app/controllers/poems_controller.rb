@@ -22,6 +22,31 @@ class PoemsController < ApplicationController
   end
 
 
+  def edit
+    @poem = Poem.find(params[:id])
+  end
+
+
+
+  def update
+    @poem = Poem.find(params[:id])
+
+    if @poem.update(params[:poem].permit(:title, :body))
+      redirect_to @poem
+    else
+      render 'edit'
+    end
+  end
+
+
+  def destroy
+    @poem = Poem.find(params[:id])
+    @poem.destroy
+
+    redirect_to root_path
+
+  end
+
 
 
   private
