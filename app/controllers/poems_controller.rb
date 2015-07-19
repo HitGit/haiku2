@@ -5,6 +5,7 @@ class PoemsController < ApplicationController
   end
 
   def new
+    @poem = Poem.new
   end
 
   def show
@@ -13,11 +14,38 @@ class PoemsController < ApplicationController
 
   def create
     @poem = Poem.new(poem_params)
-    @poem.save
-
-    redirect_to @poem
+    if @poem.save
+      redirect_to @poem
+    else
+      render 'new'
+    end
   end
 
+
+  def edit
+    @poem = Poem.find(params[:id])
+  end
+
+
+
+  def update
+    @poem = Poem.find(params[:id])
+
+    if @poem.update(params[:poem].permit(:title, :body))
+      redirect_to @poem
+    else
+      render 'edit'
+    end
+  end
+
+
+  def destroy
+    @poem = Poem.find(params[:id])
+    @poem.destroy
+
+    redirect_to root_path
+
+  end
 
 
 
