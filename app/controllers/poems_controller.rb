@@ -5,6 +5,7 @@ class PoemsController < ApplicationController
   end
 
   def new
+    @poem = Poem.new
   end
 
   def show
@@ -13,9 +14,11 @@ class PoemsController < ApplicationController
 
   def create
     @poem = Poem.new(poem_params)
-    @poem.save
-
-    redirect_to @poem
+    if @poem.save
+      redirect_to @poem
+    else
+      render 'new'
+    end
   end
 
 
