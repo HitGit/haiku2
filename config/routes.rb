@@ -6,4 +6,7 @@ Rails.application.routes.draw do
 
   root "poems#index"
 
+  get '/about', to: 'pages#about'
+
+
 end
