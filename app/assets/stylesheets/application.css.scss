@@ -207,14 +207,15 @@ a {
     }
   }
 }
-#page_wrapper {
+page_wrapper {
   padding: 3em;
-  #profile_image {
+  pheasants_image {
+
     width: 300px;
     float: left;
     margin-right: 2em;
     img {
-      width: 100%;
+      width: 10%;
       border-radius: 0.35em;
     }
   }

@@ -6,6 +6,7 @@
   <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Raleway:400,700' %>
 
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= favicon_link_tag 'favicon.ico' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -18,8 +19,8 @@
 
       <ul>
         <li class="category">Website</li>
+        <li><%= link_to "About haikus", about_path %></li>
         <li><%= link_to "HaikuYu", root_path %></li>
-        <li>About haikus</li>
       </ul>
 
 
@@ -33,7 +34,13 @@
 
     <div id="main_content">
       <div id="header">
-        <p>All haikus</p>
+        <% if current_page?(root_path) %>
+            <p>All haikus</p>
+        <% elsif current_page?(about_path) %>
+            <p>About haikus</p>
+        <% else %>
+            <%= link_to "Back to All Haikus", root_path %>
+        <% end %>
 
         <div class="buttons">
             <button class="button"><%= link_to "New Haiku", new_poem_path %></button>
