@@ -12,7 +12,9 @@
     </p>
 
     <p class="body">
-      <%= @poem.body %>
+      <% @poem.body.split("\n").each do |line| %>
+        <%= line %><br>
+          <% end %>
     </p>
 
   <div id="comments">

@@ -14,11 +14,23 @@
  *= require_self
  */
 
+
 @import 'normalize';
+@import 'comments';
+@import 'pages';
+@import 'poems';
+
 
 html, body {
-  font-family: 'Raleway', sans-serif;
+  background: url( peonies_butterflies.jpg ) no-repeat center center fixed;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+
+  font-family: 'Raleway', sans-serif
 }
+
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
@@ -35,7 +47,14 @@ a {
   left: 0;
   top: 0;
   height: 100%;
-  background: #f5f7f9;
+
+
+  background: #202020;
+  //background: #f5f7f9;  white
+  opacity: 0.7;
+
+
+
   padding: 7em 0 0 0;
   border-right: 1px solid #d6dce0;
   #logo {
@@ -111,28 +130,24 @@ a {
 
 #main_content {
 
-  body#background {
-    background: url( images/peonies_butterflies.jpg ) no-repeat center center fixed;
-    background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -webkit-background-size: cover;
-  }
-
-
 
   margin-left: 250px;
   #header {
     padding: 1em 3em;
     border-bottom: 1px solid #d6dce0;
     background: #f5f7f9;
+
     color: #9eafba;
+    background-color: rgba(255,255,255,0.05);
     p {
       display: inline;
+
     }
     a {
-      color: #9eafba;
+      //color: #9eafba;
       text-decoration: none;
+      color: #000000;
+
     }
     .buttons {
       float: right;
@@ -153,6 +168,7 @@ a {
         text-decoration: none;
         color: #2a2f35;
         font-size: 1.5em;
+
         &:hover {
           color: #33acb7;
         }
@@ -171,6 +187,7 @@ a {
       color: #2a2f35;
       font-size: 2.5em;
       margin-bottom: 0;
+      //opacity: 0.7;
     }
     .body {
       font-size: 1.1em;
@@ -199,10 +216,13 @@ a {
           margin: 1em 0 0 0;
           font-size: 0.7em;
           text-transform: uppercase;
+          //opacity: 0.7;
+
         }
         .comment_body {
           font-size: 1.2em;
           margin: 0.2em 0 0 0;
+          //opacity: 0.7;
         }
         .comment_time {
           margin-top: 1.2em;
@@ -243,6 +263,7 @@ a {
       color: #33acb7;
       font-weight: 700;
       text-decoration: none;
+
     }
   }
 }
@@ -259,13 +280,16 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
 }
 input[type="text"] {
   height: 35px;
+  opacity: 0.3;
 }
 textarea {
   min-height: 180px;
+  opacity: 0.3;
 }
 input[type="submit"] {
   outline: none;
   background: transparent;
+
   border: 1px solid #d6dce0;
   padding: .5em 1.5em;
   font-size: 1.1em;
@@ -277,11 +301,4 @@ input[type="submit"] {
   }
 }
 
-body#background {
-  background: url( images/peonies_butterflies.jpg ) no-repeat center center fixed;
-  background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-}
 

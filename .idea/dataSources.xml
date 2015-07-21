@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="4130999908">
+  <component name="DataSourceManagerImpl" format="xml" hash="28810103">
     <data-source source="LOCAL" name="Rails haiku2: development" uuid="b1028afd-5ddd-4067-ab64-6b345d5fafb5">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
