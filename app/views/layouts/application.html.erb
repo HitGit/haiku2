@@ -9,30 +9,32 @@
   <%= favicon_link_tag 'favicon.ico' %>
   <%= csrf_meta_tags %>
 </head>
+
 <body id="background">
-    <div id="sidebar">
-      <div id="logo">
-        <%= link_to root_path do %>
-          <%= image_tag "haiku.png" %>
-        <% end %>
-      </div>
+<div id="sidebar">
+  <div id="logo">
+    <%= link_to root_path do %>
+        <%= image_tag "haiku.png" %>
+    <% end %>
+  </div>
 
-      <ul>
-        <li class="category">Website</li>
-        <li><%= link_to "About haikus", about_path %></li>
-        <li><%= link_to "HaikuYu", root_path %></li>
-      </ul>
-
-
-      <ul>
-        <li class="category">Social</li>
-        <li><a href="mailto:ida.woo@gmail.com">Email</a></li>
-      </ul>
+  <ul>
+    <li class="category">Website</li>
+    <li><%= link_to "About haikus", about_path %></li>
+    <li><%= link_to "HaikuYu", root_path %></li>
+  </ul>
 
 
-      <p class="sign_in"><%= link_to "Admin Login", new_user_session_path %></p>
+  <ul>
+    <li class="category">Social</li>
+    <li><a href="mailto:ida.woo@gmail.com">Email</a></li>
+  </ul>
 
-    </div>
+  <p class="sign_in"><%= link_to "Login", new_user_session_path %></p>
+
+</div>
+
+
 
     <div id="main_content">
       <div id="header">
@@ -47,7 +49,7 @@
         <%if user_signed_in? %>
         <div class="buttons">
             <button class="button"><%= link_to "New Haiku", new_poem_path %></button>
-            <button class="button"><%= link_to "Log Out", destroy_user_session_path %></button>
+            <button class="button"><%= link_to "Log Out", destroy_user_session_path, :method => :delete  %></button>
         </div>
         <% end %>
       </div>
