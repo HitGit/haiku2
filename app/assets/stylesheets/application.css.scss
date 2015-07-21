@@ -110,6 +110,17 @@ a {
 }
 
 #main_content {
+
+  body#background {
+    background: url( images/peonies_butterflies.jpg ) no-repeat center center fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+  }
+
+
+
   margin-left: 250px;
   #header {
     padding: 1em 3em;
@@ -207,15 +218,15 @@ a {
     }
   }
 }
-page_wrapper {
+#page_wrapper {
   padding: 3em;
-  pheasants_image {
+  #pheasants_image {
 
     width: 300px;
     float: left;
     margin-right: 2em;
     img {
-      width: 10%;
+      width: 100%;
       border-radius: 0.35em;
     }
   }
@@ -224,6 +235,7 @@ page_wrapper {
       font-weight: 500;
     }
     p {
+
       font-size: 1.1em;
       line-height: 1.75;
     }
@@ -263,5 +275,13 @@ input[type="submit"] {
     border: 1px solid #33acb7;
     color: #33acb7;
   }
+}
+
+body#background {
+  background: url( images/peonies_butterflies.jpg ) no-repeat center center fixed;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
 }
 
