@@ -192,10 +192,12 @@ a {
     .body {
       font-size: 1.1em;
       line-height: 1.75;
+      border-bottom: 1px solid #d6dce0;
     }
     .date_and_author {
       color: #9eafba;
       margin: .5em 0 2em 0;
+
     }
     #comments {
       h2 {
@@ -205,6 +207,7 @@ a {
       }
       h3 {
         margin-top: 2em;
+
       }
       .comment {
         border-bottom: 1px solid #d6dce0;

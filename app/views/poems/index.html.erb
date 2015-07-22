@@ -3,6 +3,21 @@
     <h2 class="title"><%=link_to poem.title, poem %></h2>
     <p class="date"><%=poem.created_at.strftime("%B, %d, %Y") %></p>
   </div>
-<% end %>
 
+
+<!--vote, poem path is not working-->
+<div class="btn-group">
+  <a class="btn btn-default btn-sm" href=<% poems_url %>>Visit Poem</a>
+  <%= link_to like_poem_path(poem), method: :put, class: "btn btn-default btn-sm" do %>
+      <span class="glyphicon glyphicon-chevron-up"></span>
+      Upvote
+      <%= poem.get_upvotes.size %>
+  <% end %>
+  <%= link_to dislike_poem_path(poem), method: :put, class: "btn btn-default btn-sm" do %>
+    <span class="glyphicon glyphicon-chevron-down">
+    Downvote
+      <%= poem.get_downvotes.size %>
+  <% end %>
+</div>
+<% end %>
 

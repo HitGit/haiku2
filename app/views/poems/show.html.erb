@@ -17,6 +17,21 @@
           <% end %>
     </p>
 
+
+  <div class="btn-group pull-right">
+    <%= link_to like_poem_path(@poem), method: :put, class: "btn btn-default btn-sm" do %>
+        <span class="glyphicon glyphicon-chevron-up"></span>
+        Upvote
+        <%= @poem.get_upvotes.size %>
+    <% end %>
+    <%= link_to dislike_poem_path(@poem), method: :put, class: "btn btn-default btn-sm" do %>
+    <span class="glyphicon glyphicon-chevron-down">
+    Downvote
+      <%= @poem.get_downvotes.size %>
+    <% end %>
+  </div>
+
+
   <div id="comments">
     <h2><%= @poem.comments.count %> Comments</h2>
     <%= render @poem.comments %>

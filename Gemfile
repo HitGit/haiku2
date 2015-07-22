@@ -44,7 +44,7 @@ group :development, :test do
   gem 'devise', '~> 3.5.1'
   gem 'guard'
   gem 'guard-livereload', '~> 2.4', require: false
-
+  gem 'acts_as_votable', '~> 0.10.0'
 
 
 end
