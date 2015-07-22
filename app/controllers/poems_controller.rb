@@ -49,6 +49,18 @@ class PoemsController < ApplicationController
   end
 
 
+  def upvote
+    @poem = Poem.find(params[:id])
+    @poem.upvote_by current_user
+    redirect_to :back
+  end
+
+  def downvote
+    @poem = Poem.find(params[:id])
+    @poem.downvote_by current_user
+    redirect_to :back
+  end
+
 
   private
     def poem_params
